@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "410928352306",
+    "project_id": "authentication-7d124",
+    "storage_bucket": "authentication-7d124.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410928352306:android:16baed0e970c0c7f00402b",
+        "android_client_info": {
+          "package_name": "com.example.csconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410928352306-b54dah6a27qhk4ejliqi2lkhdmgmb45h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJdptOMesn1_OeIYR3RzRqbM_Nl8K23G0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410928352306-b54dah6a27qhk4ejliqi2lkhdmgmb45h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
