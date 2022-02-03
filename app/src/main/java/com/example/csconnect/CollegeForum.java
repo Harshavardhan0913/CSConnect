@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -27,8 +28,10 @@ public class CollegeForum extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private Button newQuestionButton;
     private ArrayList<Question> questions;
-    DatabaseReference db;
+    private DatabaseReference db;
     private String homeElement;
+    private ProgressBar progressBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +39,7 @@ public class CollegeForum extends AppCompatActivity {
         listView = findViewById(R.id.listView);
         Intent intent1 = getIntent();
         homeElement = intent1.getStringExtra("HomeElement");
+        progressBar = findViewById(R.id.progressBar);
 
         newQuestionButton = findViewById(R.id.newQuestionButton);
         newQuestionButton.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +54,7 @@ public class CollegeForum extends AppCompatActivity {
 
         questions = new ArrayList<Question>();
         mDatabase = FirebaseDatabase.getInstance().getReference(homeElement);
-        mDatabase.addValueEventListener(new ValueEventListener() {
+        mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
@@ -79,6 +83,7 @@ public class CollegeForum extends AppCompatActivity {
                     if(questions!=null) {
                         CollegeForumAdapter ad = new CollegeForumAdapter(CollegeForum.this, questions);
                         listView.setAdapter(ad);
+                        progressBar.setVisibility(View.GONE);
                     }
                 }
                 catch (Exception e){
@@ -100,7 +105,7 @@ public class CollegeForum extends AppCompatActivity {
                 Intent intent = new Intent(CollegeForum.this,CollegeForumOpenQuestion.class);
                 intent.putExtra("HomeElement",homeElement);
                 db = FirebaseDatabase.getInstance().getReference(homeElement);
-                db.addValueEventListener(new ValueEventListener() {
+                db.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         for(DataSnapshot dataSnapshot:snapshot.getChildren()){
@@ -110,9 +115,6 @@ public class CollegeForum extends AppCompatActivity {
                                 Log.i("parent",parent);
                                 intent.putExtra("qId",parent);
                             }
-
-
-
                         }
                         startActivity(intent);
                     }
@@ -122,6 +124,7 @@ public class CollegeForum extends AppCompatActivity {
 
                     }
                 });
+
 
 
 

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCollegeForumQuestion">
+    tools:context=".addNewContest">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout7"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -21,25 +21,47 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Question"
+            android:layout_height="45dp"
+            android:text="Heading"
+            android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/question"
+            android:id="@+id/newContestHeading"
             android:layout_width="match_parent"
-            android:layout_height="112dp"
+            android:layout_height="76dp"
             android:ems="10"
-            android:hint="Enter your question here"
-            android:inputType="textMultiLine|textPersonName" />
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/addQuestionButton"
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:text="Body"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/newContestBody"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:minHeight="150dp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/addNewContestButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Contest" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

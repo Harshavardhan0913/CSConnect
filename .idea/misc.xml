@@ -4,14 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_add_college_forum_question.xml" value="0.22" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_add_new_contest.xml" value="0.1408514492753623" />
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_college_forum.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_college_forum_add_answer.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_college_forum_open_question.xml" value="0.1796875" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_college_forum_open_question.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_contest_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_contests.xml" value="0.22" />
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_home_page.xml" value="0.22" />
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_open_review.xml" value="0.1408514492753623" />
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_reviews_home.xml" value="0.22" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/activity_show_contest.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/answers_layout.xml" value="0.22" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/contest_layout.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/question_layout.xml" value="0.22" />
+        <entry key="..\:/Users/bachu/AndroidStudioProjects/CSConnect/app/src/main/res/layout/subject_layout.xml" value="0.16666666666666666" />
       </map>
     </option>
   </component>

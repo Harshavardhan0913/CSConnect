@@ -21,6 +21,7 @@ public class HomePage extends AppCompatActivity {
     private ListView listView;
     private TextView homeUsername;
     private FirebaseAuth mAuth;
+    private TextView homePageMessage;
 
 //    private final HomeElement h1 = new HomeElement("College Forum","For Freshers and College related queries");
 //    private final HomeElement h2 = new HomeElement("Placements Forum","For placement related queries");
@@ -34,6 +35,8 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
         logout = findViewById(R.id.logout);
         homeUsername = findViewById(R.id.homeUsername);
+        homePageMessage = findViewById(R.id.homePageMessage);
+        homePageMessage.setText("Welcome to CSConnect");
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         String name = "";
@@ -68,6 +71,16 @@ public class HomePage extends AppCompatActivity {
                 else if(i==1){
                     Intent intent = new Intent(HomePage.this,CollegeForum.class);
                     intent.putExtra("HomeElement","placementsForum");
+                    startActivity(intent);
+                }
+                else if(i==2){
+                    Intent intent = new Intent(HomePage.this,ContestHome.class);
+                    intent.putExtra("HomeElement","contests");
+                    startActivity(intent);
+                }
+                else if(i==3){
+                    Intent intent = new Intent(HomePage.this,ReviewsHome.class);
+                    intent.putExtra("HomeElement","reviews");
                     startActivity(intent);
                 }
 

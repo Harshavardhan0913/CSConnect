@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,6 +31,7 @@ public class CollegeForumOpenQuestion extends AppCompatActivity {
     private String qId;
     private String homeElement;
     private ArrayList<Answer> answers;
+    private ProgressBar progressBar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class CollegeForumOpenQuestion extends AppCompatActivity {
         Intent intent = getIntent();
         homeElement = intent.getStringExtra("HomeElement");
         qId = intent.getStringExtra("qId");
+        progressBar2 = findViewById(R.id.progressBar2);
 
 
 
@@ -61,6 +64,7 @@ public class CollegeForumOpenQuestion extends AppCompatActivity {
                         }
                     }
                     Log.i("answer_length",""+answers.size());
+                    progressBar2.setVisibility(View.GONE);
                     CollegeForumAnswerAdapter adapter = new CollegeForumAnswerAdapter(CollegeForumOpenQuestion.this,answers);
                     listView.setAdapter(adapter);
 

@@ -40,22 +40,27 @@ public class Register extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String userName = regUsername.getText().toString();
                 String email = regEmail.getText().toString().trim();
                 String password = regPassword.getText().toString().trim();
-                Boolean correctLogin = checkEmailPassword(email,password);
+                Boolean correctLogin = checkEmailPassword(email,password,userName);
                 if(correctLogin) addUser(email,password);
             }
         });
 
     }
 
-    private Boolean checkEmailPassword(String email, String password) {
+    private Boolean checkEmailPassword(String email, String password,String userName) {
         Boolean isCorrect = false;
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (userName.length()==0){
+            regUsername.setError("Enter UserName");
+            regUsername.requestFocus();
+        }
+        else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             regEmail.setError("Wrong email format");
             regEmail.requestFocus();
         }
-        else if(regPassword.length()<6){
+        else if(password.length()<6){
             regPassword.setError("Password too small(Min. Characters is 6)");
             regPassword.requestFocus();
         }
@@ -72,7 +77,10 @@ public class Register extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            //FirebaseUser user = mAuth.getCurrentUser();
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(regUsername.getText().toString()).build();
+                            user.updateProfile(profileUpdates);
 
                             goToHome();
 

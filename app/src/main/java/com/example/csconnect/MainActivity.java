@@ -125,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
+        else {
+            Toast.makeText(MainActivity.this, "Google Auth failed", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void firebaseAuthWithGoogle(String idToken) {

@@ -10,28 +10,57 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CSConnect">
         <activity
+            android:name=".OpenReview"
+            android:exported="false"
+            android:parentActivityName=".HomePage" />
+        <activity
+            android:name=".ReviewsHome"
+            android:exported="false"
+            android:parentActivityName=".HomePage" />
+        <activity
+            android:name=".ShowContest"
+            android:exported="false"
+            android:label="Contests"
+            android:parentActivityName=".HomePage" />
+        <activity
+            android:name=".addNewContest"
+            android:exported="false"
+            android:label="Contests"
+            android:parentActivityName=".HomePage" />
+        <activity
+            android:name=".ContestHome"
+            android:exported="false"
+            android:label="Contests"
+            android:parentActivityName=".HomePage" />
+        <activity
             android:name=".CollegeForumAddAnswer"
             android:exported="false"
-            android:parentActivityName=".HomePage"/>
+            android:label="Forum"
+            android:parentActivityName=".HomePage" />
         <activity
             android:name=".CollegeForumOpenQuestion"
             android:exported="false"
-            android:parentActivityName=".HomePage"/>
+            android:label="Forum"
+            android:parentActivityName=".HomePage" />
         <activity
             android:name=".AddCollegeForumQuestion"
             android:exported="false"
+            android:label="Forum"
             android:parentActivityName=".HomePage" />
         <activity
             android:name=".CollegeForum"
             android:exported="false"
+            android:label="Forum"
             android:parentActivityName=".HomePage" />
         <activity
             android:name=".HomePage"
             android:exported="false"
+            android:label="Home"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Register"
             android:exported="false"
+            android:label="Register"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
